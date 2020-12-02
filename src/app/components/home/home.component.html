@@ -1,0 +1,47 @@
+<br><br>
+<div class="col-8 m-auto mt-5">
+  <ul  class="list-group">
+    <li class="list-group-item bg-dark text-white">
+      <h4>
+        Live Match
+        <span style="font-size: 30px;color:green; float: right;font-weight: bold;">
+          LIVE
+        </span>
+      </h4>
+    </li>
+
+    <li class="list-group-item text-center">
+
+    <h2> {{india['team-1']}}
+      <img style="height:100px; width:100px"
+      src="https://image.freepik.com/free-vector/vs-versus-text-logo-battle-fight-game-flat-cartoon-symbol_101884-738.jpg"/>
+      {{india['team-2']}}
+    </h2>
+       <h3>{{india.stat}}</h3>
+       <h4>{{india.description}}</h4>
+       <h6>{{india.score}}</h6>
+    </li>
+
+  </ul>
+  <br><br>
+  <ul  class="list-group">
+    <li class="list-group-item bg-dark text-white"><h4>Todays Matches</h4></li>
+    <li class="list-group-item text-center" *ngFor="let match of matches">
+      <h3>
+        {{match['team-1']}}
+        <img style="height:100px; width:100px"
+        src="https://image.freepik.com/free-vector/vs-versus-text-logo-battle-fight-game-flat-cartoon-symbol_101884-738.jpg"/>
+        {{match['team-2']}}
+      </h3>
+      <span class="badge badge-success"><b>Match Start Time</b>:- {{match.dateTimeGMT |date }}</span>
+      <span class="badge badge-danger"><b>Toss Winner Team</b> :-{{match.toss_winner_team}}</span>
+      <span class="badge badge-success"><b>Winner Team</b>:- {{match.winner_team}}</span>
+
+
+
+
+    </li>
+
+  </ul>
+
+ </div>

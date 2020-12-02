@@ -1,0 +1,44 @@
+<br><br>
+<div class="col-4 m-auto">
+  <div class="form-group">
+    <div class="row">
+      <div class="col-8">
+    <input #teamName type="text" placeholder="Search Team Name" class="form-control" >
+
+      </div>
+      <div class="col-4">
+        <button (click)="getTeam(teamName.value)" class="btn btn-danger text-uppercase">search by team</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-8 m-auto mt-5">
+<div *ngIf="matches.length === 0" class="alert-danger alert">
+  <h5>You Not Yet Searched...</h5>
+</div>
+<div *ngIf="matches.length !== 0" class="alert-success alert">
+  <h5>Search Result</h5>
+</div>
+  <ul *ngIf="matches.length !== 0" class="list-group">
+    <li class="list-group-item active">Matches</li>
+    <li class="list-group-item text-center" *ngFor="let match of matches">
+      <h3>
+        {{match['team-1']}}
+        <img style="height:100px; width:100px"
+        src="https://image.freepik.com/free-vector/vs-versus-text-logo-battle-fight-game-flat-cartoon-symbol_101884-738.jpg"/>
+        {{match['team-2']}}
+
+      </h3>
+      <h6><span><b>Type</b>{{match.type}}</span></h6>
+      <span class="badge badge-success"><b>Match Start Time</b>:- {{match.dateTimeGMT |date }}</span>
+      <span class="badge badge-danger"><b>Toss Winner Team</b> :-{{match.toss_winner_team}}</span>
+      <span class="badge badge-success"><b>Winner Team</b>:- {{match.winner_team}}</span>
+
+
+
+
+    </li>
+
+  </ul>
+
+ </div>

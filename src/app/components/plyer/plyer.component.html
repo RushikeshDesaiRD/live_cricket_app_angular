@@ -1,0 +1,32 @@
+<br><br>
+
+<!-- <div *ngIf="playerInfo.length !== 0" class="col-12 m-auto" >
+  <div class="loadingio-spinner-gear-ry8af34m1d"><div class="ldio-xste4f5bu8">
+    <div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+  </div></div>
+</div> -->
+
+
+
+<div class="col-7 m-auto">
+  <div class="card p-3 shadow-lg">
+    <div class="row">
+         <div class="col-6">
+        <img style="height: 500px; width:100%;" [src]="playerInfo.imageURL"/>
+      </div>
+        <div class="col-6">
+          <h2>{{playerInfo.name}}</h2>
+           <h3>{{playerInfo.country}}</h3>
+        <h6><b>Born:- </b>{{playerInfo.born}}<b>
+          <br>
+          Cuurent Age:- </b>{{playerInfo.currentAge}}</h6>
+
+        <h6><b>Batting Style:- </b>{{playerInfo.battingStyle}}
+          <br>
+          <b>Bowling Style :- </b> {{playerInfo.bowlingStyle}}</h6>
+        <h6><b>Major Teams</b> {{playerInfo.majorTeams}}</h6>
+        <p>{{playerInfo.profile}}</p>
+      </div>
+    </div>
+  </div>
+</div>
